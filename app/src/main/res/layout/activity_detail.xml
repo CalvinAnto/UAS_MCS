@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.DetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/detail_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Movie Detail"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+            android:background="@color/white"
+            style="@style/ThemeOverlay.UAS.Toolbar.Primary"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/colorPrimaryDark">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/detail_poster"
+                android:layout_width="240dp"
+                android:layout_height="320dp"
+                android:layout_gravity="center_horizontal"
+                android:transitionName="card_transition"
+                android:layout_marginVertical="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_launcher_background"/>
+
+            <TextView
+                android:id="@+id/detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:textSize="32dp"/>
+
+            <TextView
+                android:id="@+id/detail_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Year"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/detail_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IMBD ID"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12dp"/>
+
+            <Button
+                android:id="@+id/detail_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                style="?materialButtonOutlinedStyle" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</LinearLayout>
